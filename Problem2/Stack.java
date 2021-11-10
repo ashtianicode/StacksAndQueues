@@ -23,8 +23,8 @@ class QueueStack<E> implements Stack<E> {
     public boolean isEmpty() { return ( q1.size() == 0); }
 
 
-    public void push(E e) throws IllegalStateException {
-        // if ( (size + 1) == ???) throw new IllegalStateException("Stack is full");
+    public void push(E e) {
+        
         q1.enqueue(e);
         size ++;
 

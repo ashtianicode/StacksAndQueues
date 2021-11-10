@@ -1,6 +1,6 @@
 package Problem3;
 
-public interface Deque <E > {      
+public interface Deque <E> {      
     int size();
     boolean isEmpty();
     E first();
@@ -12,8 +12,7 @@ public interface Deque <E > {
 
 }
 
-
-class DoublyLinkedList<E> implements Deque<E> {
+class DoublyLinkedListDeque<E> implements Deque<E> {
 
     private static class Node<E> {
         private E element;
@@ -34,7 +33,7 @@ class DoublyLinkedList<E> implements Deque<E> {
     private Node<E> trailer;
     private int size = 0;
     
-    public DoublyLinkedList( ) {
+    public DoublyLinkedListDeque( ) {
         header = new Node<>(null, null, null); 
         trailer = new Node<>(null, header, null); 
         header.setNext(trailer);

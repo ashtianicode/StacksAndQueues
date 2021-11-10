@@ -1,4 +1,7 @@
 package Problem1;
+
+import java.security.DrbgParameters.Capability;
+
 public interface Queue<E> {
     int size () ; // Returns the number of elements in the queue .
     boolean isEmpty () ; // Tests whether the queue is empty .
@@ -29,6 +32,7 @@ class StackQueue<E> implements Queue<E> {
 
 
     public void enqueue(E e) throws IllegalStateException {
+        if (CAPACITY == inbox.size()) throw new IllegalStateException("Queue is full");
         inbox.push(e);
         size++;
     }   
